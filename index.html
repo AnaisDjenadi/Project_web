@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chanteurs Français - Vue.js App</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="app" class="container">
+    <header>
+      <h1>🎤 Icons of French Music</h1>
+      <p>Discover a few icons of French music</p>
+    </header>
+
+    <main class="card">
+      <img :src="artistes[current].img" :alt="artistes[current].title" class="artist-image" />
+      <div class="text-content">
+        <h2 v-if="showTitle">{{ artistes[current].title }}</h2>
+        <p v-else>{{ artistes[current].desc }}</p>
+      </div>
+
+      <div class="controls">
+        <button @click="prevItem">⬅ Previous</button>
+        <button @click="toggleText">
+          {{ showTitle ? 'Show Description' : 'Show Title' }}
+        </button>
+        <button @click="nextItem">Next ➡</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; {{ new Date().getFullYear() }} | Anaïs Djenadi | Chanson Française 🎶</p>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <script src="data/data.js"></script>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
