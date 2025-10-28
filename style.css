@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(120deg, #fcefee, #e8f7f2);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  width: 90%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: #b30059;
+  font-size: 2rem;
+}
+
+header p {
+  color: #555;
+  margin-top: 5px;
+}
+
+.card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.artist-image {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.text-content h2 {
+  color: #b30059;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  color: #444;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #b30059;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6397f;
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .artist-image {
+    max-width: 100%;
+  }
+
+  button {
+    flex: 1 1 100%;
+  }
+}
